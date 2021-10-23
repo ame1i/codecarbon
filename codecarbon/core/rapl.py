@@ -13,9 +13,6 @@ class RAPLFile:
     power: Power = Power(0)
     last_energy = 0
 
-    def __post_init__(self):
-        self.last_energy = self._get_value()
-
     def _get_value(self) -> Energy:
         """
         Reads the value in the file at the path
