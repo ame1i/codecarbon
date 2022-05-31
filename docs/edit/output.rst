@@ -4,7 +4,7 @@ Output
 ======
 
 The package has an in-built logger that logs data into a CSV file named ``emissions.csv`` in the ``output_dir``, provided as an
-input parameter [defaults to current directory], for each experiment tracked across projects.
+input parameter [defaults to current directory], for each run tracked across projects.
 
 
 .. list-table:: Data Fields Logged for each Experiment
@@ -14,17 +14,19 @@ input parameter [defaults to current directory], for each experiment tracked acr
 
    * - Fields
      - Description
-   * - experiment_id
-     - A unique identifier using uuid library
    * - timestamp
      - Time of the experiment in ``%Y-%m-%dT%H:%M:%S`` format
    * - project_name
      - Name of the project, defaults to ``codecarbon``
+   * - run_id
+     - unique id identifying the run
    * - duration
      - Duration of the compute, in seconds
    * - emissions
      - Emissions as CO₂-equivalents [CO₂eq], in kg
-   * - energy_consumed
+   * - emissions_rate
+     - emissions / duration
+   * - cpu_power
      - Total Power consumed by the underlying infrastructure, in kWh
    * - country_name
      - Name of the country where the infrastructure is hosted
