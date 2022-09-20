@@ -7,7 +7,7 @@ import tensorflow as tf
 # https://www.comet.ml/user/settings/account#section-DEVELOPER_INFORMATION
 # And here for setup information:
 # https://www.comet.ml/docs/python-sdk/advanced/#experiment-configuration-parameters
-experiment = Experiment()
+experiment = Experiment(api_key="EanLhSveVEL6DmtQwENAVidI4")
 
 mnist = tf.keras.datasets.mnist
 
